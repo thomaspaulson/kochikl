@@ -1,0 +1,12 @@
+syntax: glob
+assets/**
+silverstripe-cache/**
+framework/**
+cms/**
+blog/**
+lumberjack/**
+reports/**
+siteconfig/**
+tagfield/**
+vendor/**
+mysite/_config.php
