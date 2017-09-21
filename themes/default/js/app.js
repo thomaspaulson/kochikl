@@ -1,16 +1,18 @@
 $(document).foundation();
 
+// show enquiry_form at PageContent
 $(".contact_enquiry").click(function(event) {
 	  //event.preventDefault();
       $("#enquiry_form").toggle();	  
 }); //$(".contact_enquiry").click(function(event) {
 
 //redirect to listing page where on parent div, 'click' event
-$('.text-holder').click(function(){
-	  alert($(this).find('h3 a:first').attr('href'));		  
+$('.text-holder').click(function(){	  
+      url = $(this).find('h3 a:first').attr('href');      
+      window.location.href = url;
 });
 
-//
+// hide/show expandable searchform
 $('.search-title').click(function(){
 	if($(this).find('i').attr( 'class' ) == 'down'){
 		$(this).find('i').removeClass('down');
@@ -26,6 +28,7 @@ $('.search-title').click(function(){
 	}
 });
 
+// hide/show expandable filterform
 $('.mobile-filter-title').click(function(){
 	if($(this).find('i').attr( 'class' ) == 'down'){
 		$(this).find('i').removeClass('down');

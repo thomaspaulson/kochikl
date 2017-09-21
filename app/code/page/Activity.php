@@ -36,13 +36,22 @@ class Activity extends ContentHolder
         return $fields;
     }
     
+  	public function  Form(){        
+	 	$controller = Controller::curr();        
+	 	if($controller->class == "Activity_Controller" || is_subclass_of($controller, "Activity_Controller")) {
+	 		return Controller::curr()->Form();
+	 	}        
+	 	$c = new Activity_Controller($this);
+	 	return $c->Form();		
+  	}
+    
 }
 //
 class Activity_Controller extends ContentHolder_Controller{
     
     public function init(){
         parent::init();
-        $this->PageType = 'ActivityPage';
+        $this->PageType = 'ActivityPage';        
     }
     
     public function  Form(){
@@ -68,41 +77,15 @@ class Activity_Controller extends ContentHolder_Controller{
     
     public function Results(){
 
-        $list = parent::Results();
-        
-        /*
-        $list = ActivityPage::get();
-
-        $keyword = Convert::raw2sql($this->request->getVar('q'));
-        if($keyword){
-            $list = $list->filterAny(array(
-                'Title:PartialMatch' => $keyword,
-                'Content:PartialMatch' => $keyword
-            ));
-        }
-        
-        $location = (int)$this->request->getVar('Location');
-        if($location){
-            $list = $list->filter(array(
-                'LocationID' => $location
-            ));
-        }
-
-        $type = $this->request->getVar('Type');
-        //var_dump($type);
-        if($type){
-            $list = $list->filter(array(
-                'PageTags.ID' => $type
-            ));
-        }
-        */
+        $list = parent::Results();        
         
         $price = Convert::raw2sql($this->request->getVar('Price'));
         if($price!='all'){
             $list = $list->filter(array(
                 'PriceTags.ID' => $price
             ));
-        } //echo $list->sql();
+        }
+        //echo $list->sql();
         
         return $list;   
     }

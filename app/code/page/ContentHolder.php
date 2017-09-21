@@ -56,19 +56,19 @@ class ContentHolder extends Page
      */
     public function getContentPages()
     {
-        $contenPages = ContentPage::get()->filter('ParentID', $this->ID);        
+        $contenPages = ContentPage::get()->filter('ParentID', $this->ID)
+                        ->sort('ID DESC');        
 
         return $contenPages;
     }
     
   	public function  Form(){        
-	 	$controller = Controller::curr();
+	 	$controller = Controller::curr();        
 	 	if($controller->class == "ContentHolder_Controller" || is_subclass_of($controller, "ContentHolder_Controller")) {
-	 		return Controller::curr()->SearchAccommodationForm();
-	 	}
+	 		return Controller::curr()->Form();
+	 	}        
 	 	$c = new ContentHolder_Controller($this);
-	 	return $c->Form();
-		
+	 	return $c->Form();		
   	}
     
 }
@@ -141,6 +141,7 @@ class ContentHolder_Controller extends Page_Controller
     }    
     
     public function Results(){
+        //get page type ie ActivityPage, EventPage
         $pageType = ($this->PageType)?$this->PageType:'ContentPage';
         $list = $pageType::get();
 
@@ -166,6 +167,14 @@ class ContentHolder_Controller extends Page_Controller
             ));
         }
         
+        $sort = Convert::raw2sql($this->request->getVar('sort'));
+        if($sort){
+            
+        }
+        else{
+            $list = $list->sort('ID DESC');
+        }
+        //Debug::show($list);
         return  $list;       
     }
     

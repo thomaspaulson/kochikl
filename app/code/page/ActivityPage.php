@@ -36,7 +36,13 @@ class ActivityPage extends ContentPage{
 
         return $fields;
     }            
-    
+ 
+    public function Form(){        
+        $parent = $this->Parent();
+        $form = $parent->Form();        
+        return $form; 
+    }
+
 }
 //
 class ActivityPage_Controller extends ContentPage_Controller{
