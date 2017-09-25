@@ -179,7 +179,7 @@ $margin-top: 50;
 	text-align: center;
 	background-color: #93b8ff;	
 	position: relative;	
-	margin-bottom: rem-calc(16);
+	//margin-bottom: rem-calc(16);
 	
 	.text-wrapper{
 		position: absolute;
@@ -216,6 +216,14 @@ $margin-top: 50;
 .white-text{
 	color: $white;
 }
+
+.graybg{
+	background-color: #e9e9e9;
+}
+.whitebg{
+	background-color: $white;
+}		
+
 
 //featured listing -> home
 .home_featured{
@@ -276,7 +284,7 @@ $margin-top: 50;
 	
 }
 .featured-listing{
-	padding: rem-calc(32) 0 rem-calc(24 0); 	
+	padding: rem-calc(32) 0 rem-calc(24) 0; 	
 	
 	.article-wrapper{		
 		.text-holder{
@@ -437,7 +445,16 @@ $margin-top: 50;
 
 .main{
 	padding-top: rem-calc(20);
-	
+		
+	form{
+		max-width: rem-calc(510);
+				
+		label.error{
+			color: red;
+			font-size: rem-calc(13);	
+		}		
+	}	
+		
 	.contact_list{
 		list-style-type: none;
 		margin-left: 0;
@@ -635,12 +652,6 @@ $margin-top: 50;
 	} //	.side-content{
 
 	.main-content{
-		.even{
-			background-color: #e9e9e9;
-		}
-		.odd{
-			background-color: $white;
-		}		
 		.search-menu{
 			list-style-type: none;
 		    margin: 0;
@@ -930,6 +941,70 @@ $margin-top: 50;
 
 // small devices	
 @media only screen and (max-width: 640px) {
+	
+	//featured listing -> home
+	.home_featured{
+		.article-wrapper{		
+			.text-holder{
+//				overflow: hidden;
+//				position: relative;
+//				height: 225px;
+//				margin-bottom: 1rem;
+			}
+			.readmore{
+//				bottom: -1.5rem;
+//				font-size: .8rem;
+//				height: 2.5em;
+//				left: 0;
+//				padding: 0.3rem 3% 1rem;
+//				position: absolute;
+//				transition-duration: 0.25s;
+//				transition-property: all;
+//				width: 100%;
+//				display:inline-block;
+			}
+			&:hover{
+				cursor: pointer;
+				.readmore{
+					bottom: 0;
+				}	
+			}
+		}	//.article-wrapper{
+		h2{
+			margin-top: rem-calc(20);
+			margin-bottom: rem-calc(16);
+		}
+		h3{	
+			margin-top: rem-calc(16);		
+		}
+	}
+	// pages holder ie events page
+	.holder_header{
+		h2{
+			margin-top: rem-calc(20);		
+			margin-bottom: 0;
+			text-align: center;
+			color: #1263ac;
+		}
+		
+	}
+	.featured-listing{
+		padding: rem-calc(20) 0 rem-calc(16) 0; 	
+		
+		.article-wrapper{		
+			.text-holder{
+				overflow: hidden;
+				position: relative;
+				height: 225px;
+				margin-bottom: 1rem;
+			}
+		}	//.article-wrapper{
+				
+		h3{	
+			margin-top: rem-calc(20);
+		}
+		
+	}
 	
 	//filter/refine by on sidebar
 	.filter-form-wrapper{

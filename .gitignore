@@ -9,3 +9,5 @@ reports/**
 siteconfig/**
 tagfield/**
 vendor/**
+sql/
+/nbproject/private/

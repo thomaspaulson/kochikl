@@ -1,4 +1,5 @@
-    <div class="main-banner">
+
+<div class="main-banner">
 	    <img src="$ThemeDir/images/main-banner.png">
         <div class="text-wrapper"> 
 	        <h1>Welcome to Kochi/Cochin, Kerala</h1>
@@ -6,10 +7,7 @@
         </div>
     </div>    
 
-	<div class="main">
-		<div class="main-content">    
-        
-        <div class="home_featured odd">
+        <div class="home_featured whitebg">
             <div class="row">
               <div class="large-12 columns">
                 <h2>Things to do</h2>    
@@ -18,7 +16,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href=""><img src="images/img4.jpg"></a>
+                                <a href=""><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -30,7 +28,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -42,7 +40,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -56,10 +54,10 @@
 
               </div>
             </div>
-        </div>	<!--div class="home_featured odd"-->        
+        </div>	<!--div class="home_featured whitebg"-->        
         
     
-        <div class="home_featured even">
+        <div class="home_featured graybg">
             <div class="row">
               <div class="large-12 columns">
                 <h2>Accommodation</h2>    
@@ -67,7 +65,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href=""><img src="images/img4.jpg"></a>
+                                <a href=""><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -79,7 +77,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -91,7 +89,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -103,10 +101,10 @@
                   </div>       
               </div>
             </div>
-        </div>	<!--div class="home_featured even"-->        
+        </div>	<!--div class="home_featured graybg"-->        
             
     
-        <div class="home_featured odd">
+        <div class="home_featured whitebg">
             <div class="row">
               <div class="large-12 columns">
                 <h2>Events</h2>    
@@ -114,7 +112,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href=""><img src="images/img4.jpg"></a>
+                                <a href=""><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -126,7 +124,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -138,7 +136,7 @@
                     <div class="large-4 medium-4 columns">
 	                   <div class="article-wrapper">
                         	<div class="image-holder">	
-                                <a href="#"><img src="images/img4.jpg"></a>
+                                <a href="#"><img src="$ThemeDir/images/img4.jpg"></a>
                             </div>    
                         	<div class="text-holder">                            
 	                        <h3><a href="#">Alappuzha</a></h3>
@@ -150,8 +148,5 @@
                   </div>       
               </div>
             </div>
-        </div>	<!--div class="home_featured odd"-->        
-    
-    
-	    </div>    	<!-- div class="main-content" -->           
-    </div>    	<!-- div class="main" -->   
+        </div>	<!--div class="home_featured whitebg"-->        
+

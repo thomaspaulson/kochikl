@@ -1,0 +1,11 @@
+@charset 'utf-8';
+@import 'typography';
+body.mceContentBody{font-size: $global-font-size;}
+p{
+	a{		
+		text-decoration:underline;
+		color: #0a0a0a;
+		cursor: pointer;
+		line-height: inherit;		
+	}	
+}
