@@ -1,6 +1,8 @@
 	<div class="footer">
         <div class="footer-primary">    
-				<div class="row small-up-2 medium-up-3 large-up-5">
+            <%-- $BlockArea(Footer) --%>
+            
+            <div class="row small-up-2 medium-up-3 large-up-5">                
                   <div class="column column-block">
                     <h5><a href="#">Plan trip to kochi</a></h5>
                     <ul>
@@ -49,14 +51,14 @@
                         <li><a href="#">Meet the team</a></li>
                         <li><a href="#">List on this website</a></li>
                         <li>
-                        	<a href="#"><span class="facebook-icon"></span></a>
+                            <a href="#"><span class="facebook-icon"></span></a>
                             <a href="#"><span class="twitter-icon"></span></a>
                             <a href="#"><span class="linkedin-icon"></span></a>
                         </li>
                     </ul>
-                </div>                            
-                
+                </div>                                            
             </div>       
+            
         </div>	<!--div class="footer-primary"--> 
 
         <div class="footer-secondary"> 
@@ -65,8 +67,7 @@
                     <ul>
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">List on this website</a></li>
-                        <li><a href="#">Report an issue</a></li>
-                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Report an issue</a></li>                        
                         <li><a href="#">Website by lastGrade</a></li>                        
                     </ul>
                 

@@ -1,0 +1,20 @@
+{
+	"name": "heyday/silverstripe-menumanager",
+	"type": "silverstripe-module",
+	"description": "Allows complex menu management to be handled through the CMS when a simple tree structure is not enough.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Heyday Developers",
+			"email": "dev@heyday.co.nz",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"silverstripe/framework": "~3.1",
+		"symbiote/silverstripe-gridfieldextensions": "^2.0"
+	},
+	"extra": {
+		"dev-master": "2.1.x-dev"
+	}
+}

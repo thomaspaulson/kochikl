@@ -11,6 +11,7 @@ class Activity extends ContentHolder
     
     private static $hide_ancestor = 'ContentHolder';
     
+    private static $allowed_children = array('ActivityPage');        
     /**
      * {@inheritdoc}
      */
@@ -51,7 +52,7 @@ class Activity_Controller extends ContentHolder_Controller{
     
     public function init(){
         parent::init();
-        $this->PageType = 'ActivityPage';        
+        $this->pageType = 'ActivityPage';        
     }
     
     public function  Form(){

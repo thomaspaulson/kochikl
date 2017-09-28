@@ -6,14 +6,14 @@ class ContentHolder extends Page
      * @var array
      */
     private static $db = array(
-        'ContentPerPage' => 'Int',
+        'ContentsPerPage' => 'Int',
     );
         
     /**
      * @var array
      */
     private static $has_many = array(
-        'Tags' => 'PageTag',
+        'TypeTags' => 'TypeTag',
     );
     
     /**
@@ -24,6 +24,14 @@ class ContentHolder extends Page
     );
     
     /**
+     * @var array
+     */
+    private static $defaults = array(
+        //'ProvideComments' => false,
+        'ContentsPerPage' => 15,
+    );
+    
+    /**
      * {@inheritdoc}
      */
     public function getCMSFields()
@@ -31,9 +39,9 @@ class ContentHolder extends Page
         $fields = parent::getCMSFields();
         
         $gridField = GridField::create(
-            'Tags',
-            'Tags',
-            $this->Tags()            
+            'Types',
+            'Types',
+            $this->TypeTags()            
         );
         $gridFieldConfig = GridFieldConfig_RecordEditor::create();
         $gridField->setConfig($gridFieldConfig);        
@@ -48,6 +56,16 @@ class ContentHolder extends Page
         return $fields;
     }
     
+    public function getSettingsFields()
+    {
+        $fields = parent::getSettingsFields();
+        
+        $fields->addFieldToTab('Root.Settings',
+            NumericField::create('ContentsPerPage', _t('ContentHolder.ContentsPerPage', 'Posts Per Page'))
+        );
+        
+        return $fields;
+    }    
     
     /**
      * Return blog posts.
@@ -101,7 +119,7 @@ class ContentHolder_Controller extends Page_Controller
      */
     protected $contentPages;
 
-    protected $PageType;
+    protected $pageType;
     
     public function init()
     {
@@ -135,16 +153,16 @@ class ContentHolder_Controller extends Page_Controller
     }
     
     public function search(){
-		$this->title = 'Search';
-		$this->contentPages = $this->Results();        
+        $this->title = 'Search';
+        $this->contentPages = $this->Results();        
         return $this->render();
     }    
     
     public function Results(){
         //get page type ie ActivityPage, EventPage
-        $pageType = ($this->PageType)?$this->PageType:'ContentPage';
+        $pageType = ($this->pageType)?$this->pageType:'ContentPage';
         $list = $pageType::get();
-
+        //echo $pageType;
         $keyword = Convert::raw2sql($this->request->getVar('q'));
         if($keyword){
             $list = $list->filterAny(array(
@@ -163,7 +181,7 @@ class ContentHolder_Controller extends Page_Controller
         $type = Convert::raw2sql($this->request->getVar('Type'));
         if($type!='all'){
             $list = $list->filter(array(
-                'PageTags.ID' => $type
+                'TypeTags.ID' => $type
             ));
         }
         
@@ -184,8 +202,8 @@ class ContentHolder_Controller extends Page_Controller
         $posts = new PaginatedList($allPosts);
 
         // Set appropriate page size
-        if ($this->ContentPerPage > 0) {
-            $pageSize = $this->ContentPerPage;
+        if ($this->ContentsPerPage > 0) {
+            $pageSize = $this->ContentsPerPage;
         } elseif ($count = $allPosts->count()) {
             $pageSize = $count;
         } else {

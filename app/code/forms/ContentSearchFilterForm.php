@@ -13,7 +13,7 @@ class ContentSearchFilterForm extends Form {
         $locations = array('all' => 'All locations') + $locations;
         //array_unshift($locations, array('all' => 'All locations') );        
         $data = $controller->data();
-        $types = $data->Tags()->map('ID','Title')->toArray();
+        $types = $data->TypeTags()->map('ID','Title')->toArray();
         $types = array('all' => 'All types') + $types;
         //array_unshift($types, array('all' => 'All types') );
         $fields = new FieldList(

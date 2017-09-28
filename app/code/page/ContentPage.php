@@ -11,8 +11,10 @@ class ContentPage extends Page
     );
     
     private static $many_many = array(
-        'PageTags' => 'PageTag'
+        'TypeTags' => 'TypeTag'
     );
+    
+    public static $can_be_root = false;
     
     /**
      * {@inheritdoc}
@@ -20,11 +22,12 @@ class ContentPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();               
-
+        
         $fields->insertAfter(            
             $uploadField = new UploadField('FeaturedImage', 'Featured image'),
             'Content'
         );
+        $uploadField->setFolderName('Uploads/'. strtolower($this->parent()->ClassName));
         
         $fields->addFieldToTab('Root.Categorisation',
                 DropdownField::create('LocationID','Location', Location::get()->map('ID','Title'))
@@ -32,23 +35,22 @@ class ContentPage extends Page
                 );
         $parent = $this->Parent();       
         
-        $pageTags = $parent instanceof ContentHolder
-            ? $parent->Tags()
-            : PageTage::get();
+        $typeTags = $parent instanceof ContentHolder
+            ? $parent->TypeTags()
+            : TypeTag::get();
 
         $tagField = TagField::create(
-                'PageTags',
-                'Tags',
-                $pageTags,
-                $this->PageTags()
+                'TypeTags',
+                'Type',
+                $typeTags,
+                $this->TypeTags()
             )
             ->setCanCreate(false)
             ->setShouldLazyLoad(true);        
         
         $fields->addFieldsToTab('Root.Categorisation', array(            
             $tagField
-        ));
-        
+        ));       
 
         return $fields;
     }        
@@ -57,8 +59,7 @@ class ContentPage extends Page
         $parent = $this->Parent();
         $form = $parent->Form();        
         return $form; 
-    }
-    
+    }    
 }
 //
 class ContentPage_Controller extends Page_Controller
@@ -86,7 +87,6 @@ class ContentPage_Controller extends Page_Controller
         parent::init();
         // You can include any CSS or JS required by your project here.
         // See: http://doc.silverstripe.org/framework/en/reference/requirements
-    }
-    
+    }    
     
 }

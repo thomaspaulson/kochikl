@@ -1,34 +1,18 @@
-	<div class="breadcrumb-wrapper">
-        <div class="row">
-	        <div class="small-12 medium-12 large-12 columns">
-	            <nav aria-label="You are here:" role="navigation">
-            	  <ul class="breadcrumbs">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li class="disabled">Gene Splicing</li>
-                    <li>
-                      <span class="show-for-sr">Current: </span> Cloning
-                    </li>
-                  </ul>
-               	</nav>   
-			</div>
-		</div>            
-    </div>	<!-- div class="breadcrumb-wrapper" -->
-    
+    <% include Breadcrumb %>
     <div class="searchform-wrapper">
         <div class="row">
-	        <div class="small-12 medium-12 large-12 columns">
-            	<h6 class="search-title hide-for-medium">Search Accommodation<i class="down"></i></h6>
-               	<div class="searchform-expandable">
-                 $Form   
-				</div> <!-- div class="searchform-expandable hide-for-small-only" -->
-			</div>
-		</div>            
-    </div>	<!-- div class="breadcrumb-wrapper" -->
+            <div class="small-12 medium-12 large-12 columns">
+            <h6 class="search-title hide-for-medium">Search Accommodation<i class="down"></i></h6>
+            <div class="searchform-expandable">
+             $Form   
+            </div> <!-- div class="searchform-expandable hide-for-small-only" -->
+            </div>
+        </div>            
+    </div>	<!-- div class="searchform-wrapper" -->
 
-	<div class="heading-bar">
+    <div class="heading-bar">
         <div class="row">
-	        <div class="small-12 medium-8 large-8 medium-centered large-centered columns">
+            <div class="small-12 medium-8 large-8 medium-centered large-centered columns">
             	<h1>$Title</h1>
                 <h3>12 Jan - 15 Jan 2017</h3>
                 <p>The British & Irish Lions are coming to Wellington for two not-to-be-missed matches against the Hurricanes and the All Blacks!</p>
@@ -38,23 +22,13 @@
                         <li><a href="#" class="link">Add to itenary</a></li>
                     </ul>
                 </div>
-			</div>
-		</div>            
+            </div>
+	</div>            
     </div>
     
     
     <div class="row top-spacing">        	
         <div class="large-12 cell">
-        <!--                
-        <div class="featured-image-items featured-single-image-item">         
-            <figure>       
-            <a rel="lg-gallery" href="images/slide.jpg" title="My Caption" class="lightbox featured-item">      		       	                    
-            <img src="http://via.placeholder.com/735x470">
-            </a>       
-            </figure>
-        </div>      
-        -->
-
         <div class="featured-image-items">         
             <figure>       
             <a rel="lg-gallery" href="images/slide.jpg" title="My Caption" class="lightbox featured-item">      		       	                    

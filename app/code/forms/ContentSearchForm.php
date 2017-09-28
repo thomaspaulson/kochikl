@@ -12,7 +12,7 @@ class ContentSearchForm extends Form {
         $locations = Location::get()->map('ID','Title')->toArray();
         $locations = array('all'  => 'All locations') + $locations;
         $data = $controller->data();
-        $types = $data->Tags()->map('ID','Title')->toArray();
+        $types = $data->TypeTags()->map('ID','Title')->toArray();
         $types = array('all' => 'All types') + $types;
         $fields = new FieldList(
             DropdownField::create('Location','Location', $locations),

@@ -10,4 +10,8 @@ siteconfig/**
 tagfield/**
 vendor/**
 sql/
+betterbuttons/
 /nbproject/private/
+silverstripe-menumanager/
+gridfieldextensions/
+sql/
