@@ -1,6 +1,8 @@
-	<div class="main">
+	<% include Breadcrumb %>
+        <div class="main">
             <div class="row">
-            <div class="large-12 columns">
+            <% include Sidebar %>    
+            <div class="<% if $Menu(2) %>small-12 medium-9 large-9<% else %>small-12 medium-12 large-12<% end_if %> columns">
                 <h1>$Title</h1>
                 $Content
                 $Form                
