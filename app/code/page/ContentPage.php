@@ -3,6 +3,7 @@
 class ContentPage extends Page
 {
     private static $db = array(
+        'RightContent' => 'HTMLText'
     );
 
     private static $has_one = array(
@@ -22,6 +23,10 @@ class ContentPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();               
+        
+        $fields->addFieldToTab('Root.RightContent',
+                new HTMLEditorField("RightContent", "Right Content")
+        );
         
         $fields->insertAfter(            
             $uploadField = new UploadField('FeaturedImage', 'Featured image'),

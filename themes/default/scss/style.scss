@@ -555,9 +555,14 @@ $margin-top: 50;
 		}
 	}
 
+	.right-padding{
+		margin-right: 8px;
+	}
+	.left-padding{
+		margin-left: 8px;
+	}
 	
-	.side-content{		
-		
+	.side-content{				
 		.search-form{
 			background-color: $my-black;
 			color: $white;
@@ -711,7 +716,77 @@ $margin-top: 50;
 				}
 			}
 		}		
-	}//
+	}// main-content
+	
+	/* Search Results */
+	.searchResults{ 
+		h1 {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: none;
+		}
+		p.searchQuery {
+			margin-bottom: 10px;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		
+		ul#SearchResults {
+			padding: 0;
+			border-bottom: 1px solid #e5e5e5;
+			margin:0;
+			
+			li {
+				border-top: 1px solid #e5e5e5;
+				padding: 20px 0;
+				list-style-type: none;
+			}
+			
+			p {
+				margin-bottom: 10px;
+			}
+			
+		}
+		
+	}	//.searchResults{ 
+	
+	#PageNumbers {
+		a {
+		padding: 0 5px;
+		}
+
+		.pagination {
+			border-bottom: 1px solid #e5e5e5;
+			padding: 20px 0;
+			display:table; /* displays the pagination as a table so that elements stay inline and the middle column adjusts its size to accomodate and the right arrow stays to the right */
+			width:100%;
+			
+			span{
+				display:table-cell; /* each element in the pagination div displays as a table cell */
+			}				
+		}
+		
+		p {
+			text-align: center;
+			padding:20px 0;
+		}
+	
+		.next, .prev {
+			font-size: 14px;
+			padding: 0 20px;
+			display:table-cell; /* each element in the pagination div displays as a table cell */
+			vertical-align: middle;
+			border-bottom:0 !important;
+		}
+		.next {
+			margin-left: 15px;
+		}
+		.prev {
+			margin-right: 15px;
+		}	
+			
+	} //#PageNumbers {
+	
 } // .main
 
 #enquiry_form{
