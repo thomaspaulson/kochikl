@@ -18,6 +18,7 @@ class Page_Controller extends ContentController
      * @var array
      */
     private static $allowed_actions = array(
+        'MySearchForm'
     );
 
     public function init()
@@ -31,5 +32,10 @@ class Page_Controller extends ContentController
 		Requirements::javascript("themes/default/js/jquery.js");
 		Requirements::javascript("themes/default/js/what-input.js");
 		Requirements::javascript("themes/default/js/foundation.js");		        
+    }
+    
+    public function MySearchForm(){
+        $form = new MySearchForm($this, 'MySearchForm');
+        return $form;
     }
 }

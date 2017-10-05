@@ -1,16 +1,19 @@
     <% include Breadcrumb %>
-    <% include SearchWrapper %>
+    <% include SearchWrapper %>    
+    <% include Banner %>        
+
     
 	<div class="main">       
-            <div class="main-content">         
+            <div class="main-content">                     
+                <!-- 
                 <div class="holder_header">
                     <div class="row">
                       <div class="large-12 columns">
                         <h2>$Title</h2>    
                       </div>
                     </div>
-                </div>	<!--div class="holder_header"-->        
-        
+                </div>	
+                -->
                 <% if $PaginatedList.Exists %>
                 <div class="featured-listing whitebg">
                     <div class="row">                

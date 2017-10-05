@@ -175,6 +175,7 @@ $margin-top: 50;
 	} //	.search-bar	{
 
 }//.header{
+	
 .main-banner{
 	margin: 0 auto;
 	text-align: center;
@@ -188,7 +189,7 @@ $margin-top: 50;
 		transform: translateX(-50%);		
 		top: 40%;
 		margin: 0 auto;
-	    max-width: 800px;
+	    max-width: 600px;
     	width: 80%;
 		text-align: center;
 		color: $white;		
@@ -329,6 +330,52 @@ $margin-top: 50;
 		text-align: justify;
 	}
 	
+} //.featured-listing{
+	
+.article-listing{
+	margin-bottom: rem-calc(16);
+		
+	.article-wrapper{		
+		.text-holder{
+			overflow: hidden;
+			position: relative;
+			height: 225px;
+			margin-bottom: 1rem;
+		}
+		.readmore{
+			bottom: -1.5rem;
+			font-size: .8rem;
+			height: 2.5em;
+			left: 0;
+			padding: 0.3rem 3% 1rem;
+			position: absolute;
+			transition-duration: 0.25s;
+			transition-property: all;
+			width: 100%;
+			display:inline-block;
+		}
+		&:hover{
+			cursor: pointer;
+			.readmore{
+				bottom: 0;
+			}	
+		}
+	}	//.article-wrapper{
+			
+	h3{	
+		margin-top: rem-calc(16);
+		a{
+			color: $black;
+			&:hover{
+				color: $primary-color;				
+			}
+			
+		}
+	}
+	p{
+		color: #898989;
+		text-align: justify;
+	}
 }
 .breadcrumb-wrapper, .searchform-wrapper{
 	padding-top: rem-calc(16);
@@ -660,7 +707,7 @@ $margin-top: 50;
 		.secondary h3 {
 			//font-size: 20px;
 			color: #AAA;
-			margin: 0 0 8px 0;
+			margin: 12px 0 8px 0;
 			//font-family: "CamboRegular", Georgia, "Times New Roman", Times, serif;
 			font-weight: normal;
 		}

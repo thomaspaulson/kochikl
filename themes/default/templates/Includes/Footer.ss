@@ -2,27 +2,29 @@
         <div class="footer-primary">    
             <%-- $BlockArea(Footer) --%>
             
-            <div class="row small-up-2 medium-up-3 large-up-5">                
+            <div class="row small-up-2 medium-up-3 large-up-6">                
                   <div class="column column-block">
-                    <h5><a href="#">Plan trip to kochi</a></h5>
+                    <h5><a href="plan-your-trip/">Plan trip to kochi</a></h5>
                     <ul>
-                        <li><a href="#">Getting here</a></li>
-                        <li><a href="#">Getting around</a></li>
-                        <li><a href="#">Visa on arrival</a></li>                        
-                        <li><a href="#">Maps & Guide</a></li>                                            
-                        <li><a href="#">Help</a></li>
+                        <li><a href="plan-your-trip/getting-here/">Getting here</a></li>
+                        <li><a href="plan-your-trip/getting-around/">Getting around</a></li>
+                        <li><a href="plan-your-trip/essential-information/faq-frequently-asked-questions/#visa-on-arrival">Visa on arrival</a></li>                        
+                        <li><a href="plan-your-trip/maps-and-guides/">Maps & Guide</a></li>                                            
+                        <li><a href="plan-your-trip/guided-tours/">Guided tours</a></li>
                     </ul>
                 </div>                    
                   <div class="column column-block">
-                    <h5>See &amp; do</h5>
+                      <h5><a href="sight-n-activities/">See &amp; do</a></h5>
                     <ul>
-                        <li><a href="#">Active & adventure</a></li>                    
-                        <li><a href="#">Arts, culture & heritage</a></li>
-                        <li><a href="#">Children & families</a></li>
+                        <li><a href="sight-n-activities/type/active-and-adventure">Active & adventure</a></li>                    
+                        <li><a href="sight-n-activities/type/arts%2C-culture-and-heritage">Arts, culture & heritage</a></li>
+                        <li><a href="sight-n-activities/type/children-and-families">Children & families</a></li>
+                        <li><a href="sight-n-activities/type/guided-tours">Guided tours</a></li>
+                        <li><a href="sight-n-activities/type/parks%2C-walks-and-wildlife">Parks, walks & wildlife</a></li>
                     </ul>
                 </div>    
                   <div class="column column-block">
-                    <h5>Events</h5>
+                      <h5><a href="#">Events</a></h5>
                     <ul>
                     
                         <li><a href="#">Central Kochi</a></li>
@@ -33,23 +35,33 @@
                     
                     </ul>
                 </div>    
-                  <div class="column column-block">
-                    <h5>Where to stay</h5>
+                <div class="column column-block">
+                    <h5><a href="where-to-stay/">Where to stay</a></h5>
                     <ul>
-                        <li><a href="#">Homestay</a></li>
-                        <li><a href="#">Hotel</a></li>                        
-                        <li><a href="#">Bed & breakfast</a></li>
-                        <li><a href="#">Backpackers</a></li>
-                        <li><a href="#">Houseboats</a></li>
+                        <li><a href="where-to-stay/type/homestay">Homestay</a></li>
+                        <li><a href="where-to-stay/type/hotel">Hotel</a></li>                        
+                        <li><a href="where-to-stay/type/bed-and-breakfast">Bed & breakfast</a></li>
+                        <li><a href="where-to-stay/type/backpackers">Backpackers</a></li>
+                        <li><a href="where-to-stay/type/houseboats">Houseboats</a></li>
                     </ul>
-                </div>                            
-                  <div class="column column-block">
-                    <h5>About us</h5>
+                </div>                 
+                <div class="column column-block">
+                    <h5><a href="plan-your-trip/getting-around/">Getting around</a></h5>
                     <ul>
-                        <li><a href="#">Contact us</a></li>                    
-                        <li><a href="#">Work with us</a></li>                    
-                        <li><a href="#">Meet the team</a></li>
-                        <li><a href="#">List on this website</a></li>
+                        <li><a href="plan-your-trip/getting-around/car-rental-hire/">Car Hire/Rental</a></li>
+                        <li><a href="plan-your-trip/getting-around/motorcycle-rental/">Motorcycle Rental</a></li>                        
+                        <li><a href="plan-your-trip/guided-tours/day-trips/">Day trips</a></li>
+                        <li><a href="plan-your-trip/guided-tours/tours-package/">Tours/Package</a></li>
+                        <li><a href="plan-your-trip/guided-tours/cycling-tours-trails/">Cycling tours/trails</a></li>
+                    </ul>
+                </div>                                 
+                  <div class="column column-block">
+                      <h5><a href="about/">About us</a></h5>
+                    <ul>
+                        <li><a href="about/contact-us">Contact us</a></li>                    
+                        <li><a href="about/work-with-us">Work with us</a></li>                    
+                        <li><a href="about/meet-the-team">Meet the team</a></li>
+                        <li><a href="about/get-listed-on-this-website/">List on this website</a></li>
                         <li>
                             <a href="#"><span class="facebook-icon"></span></a>
                             <a href="#"><span class="twitter-icon"></span></a>
@@ -65,10 +77,9 @@
             <div class="row">
                 <div class="small-12 medium-8 large-8 columns">
                     <ul>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">List on this website</a></li>
-                        <li><a href="#">Report an issue</a></li>                        
-                        <li><a href="#">Website by lastGrade</a></li>                        
+                    <% loop $MenuSet('FooterSecondary').MenuItems %>
+                    <li><a href="$Link" <% if $IsNewWindow %>target="_blank"<% end_if %>>$MenuTitle</a></li>
+                    <% end_loop %>            
                     </ul>
                 
                 </div>                            

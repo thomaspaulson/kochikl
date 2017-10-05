@@ -12,3 +12,5 @@ require_once('conf/ConfigureFromEnv.php');
 i18n::set_locale('en_US');
 //enable search
 FulltextSearchable::enable();
+
+//ShortcodeParser::get('default')->register('listsubpage', array('Page', 'ListSubPagesSC'));
