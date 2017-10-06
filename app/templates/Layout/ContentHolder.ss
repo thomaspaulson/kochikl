@@ -21,7 +21,7 @@
                               <div class="large-4 medium-4 <% if not $MultipleOf(3)  && $Last %>end <% end_if %>columns">
                                  <div class="article-wrapper">
                                       <div class="image-holder">	
-                                          <a href="$Link">$FeaturedImage.setWidth(795)</a>
+                                          <a href="$Link">$FeaturedImage.CroppedImage(368,212)</a>
                                       </div>    
                                       <div class="text-holder">                            
                                       <h3>
@@ -29,7 +29,7 @@
                                             <% if $MenuTitle %>$MenuTitle<% else %>$Title<% end_if %>
                                         </a>                                                                                
                                       </h3>
-                                      <p>$Content.Summary(22)</p>
+                                      <% if $Summary %>$Summary<% else %><p>$Excerpt(20)<p><% end_if %>                                          
                                       <div class="readmore  <% if $Even %>blue-bg<% else %>red-bg<% end_if %> white-text slide-up">Read more ></div>
                                       </div>
                                   </div> <!-- div class="article-wrapper" -->

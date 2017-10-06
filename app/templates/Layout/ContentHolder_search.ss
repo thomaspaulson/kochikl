@@ -34,7 +34,7 @@
                         </div>   
         
                         <div class="page-content">
-                         <p>$Content.Summary<p>                            
+                         <% if $Summary %>$Summary<% else %><p>$Excerpt(20)<p><% end_if %>                         
                          <p class="smalltext">Departs Wellington Railway Station, Wellington</p>                                    
                         </div>
                         <%--

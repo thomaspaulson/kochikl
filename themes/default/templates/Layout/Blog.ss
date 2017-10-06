@@ -1,5 +1,6 @@
-<% require themedCSS('blog', 'blog') %>
-
+    <% require themedCSS('blog', 'blog') %>
+    <% include Breadcrumb %>	    
+    <%-- include Banner --%>	    
       <div class="main">
         <div class="row">
           <div class="small-12 large-9 columns main-content">

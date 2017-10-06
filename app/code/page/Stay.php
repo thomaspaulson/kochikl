@@ -53,7 +53,7 @@ class Stay_Controller extends ContentHolder_Controller{
     
     public function init(){
         parent::init();
-        $this->PageType = 'StayPage';        
+        $this->pageType = 'StayPage';        
     }
     
     public function  Form(){
@@ -62,7 +62,7 @@ class Stay_Controller extends ContentHolder_Controller{
         $price = array('all' => 'All prices') + $price;
         $priceField = DropdownField::create('Price','Price', $price);       
         $form->Fields()->push($priceField);
-        //$form->setTemplate('StaySearchForm');
+        $form->setTemplate('StaySearchForm');
         $form->loadDataFrom($_REQUEST);
         return $form;
     }
@@ -78,17 +78,14 @@ class Stay_Controller extends ContentHolder_Controller{
     }
     
     public function Results(){
-
-        $list = parent::Results();        
-        
+        $list = parent::Results();                
         $price = Convert::raw2sql($this->request->getVar('Price'));
         if($price!='all'){
             $list = $list->filter(array(
                 'PriceTags.ID' => $price
             ));
         }
-        //echo $list->sql();
-        
+        //echo $list->sql();        
         return $list;   
     }
     

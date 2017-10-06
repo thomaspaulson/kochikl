@@ -159,7 +159,7 @@ class ContentHolder_Controller extends Page_Controller
     }    
     
     public function Results(){
-        //get page type ie ActivityPage, EventPage
+        //get page type ie ActivityPage, EventPage,StayPage
         $pageType = ($this->pageType)?$this->pageType:'ContentPage';
         $list = $pageType::get();
         //echo $pageType;
