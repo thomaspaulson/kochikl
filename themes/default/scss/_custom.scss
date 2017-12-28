@@ -1,0 +1,124 @@
+/* CSS Document */
+
+	.contact_list{
+		list-style-type: none;
+		margin-left: 0;
+		li{
+			position: relative;
+			margin-bottom: 12px;
+			
+			span.icon{
+				display: inline-block;
+				position: relative;
+				padding-left:38px;
+				min-height: 24px;
+				&::before{				
+					background-image: url(../images/bg-icons.png);
+					background-repeat: no-repeat;
+					height: 24px;
+					width: 24px;
+					float: left;
+					margin-top: 2px;
+					//background-color:#666;
+					left: 0;
+					position: absolute;			
+					content: "";		
+				}
+			}	
+			span.address-icon{	
+				&::before{
+					background-position: 0 0;
+				}
+			}		
+			span.phone-icon{	
+				&::before{
+					background-position: -24px 0;
+				}
+			}		
+			span.mobile-icon{	
+				&::before{
+					background-position: -48px 0;
+				}
+			}		
+			span.email-icon{	
+				&::before{			
+					background-position: -72px 0;
+				}
+			}		
+			span.website-icon{	
+				&::before{
+					background-position: -96px 0;
+				}
+			}		
+			span.ticket-icon{	
+				&::before{
+					background-position: -120px 0;
+				}
+			}					
+			span.calendar-icon{	
+				&::before{
+					background-position: -144px 0;
+				}
+			}			
+		}
+	}//	.contact_list{
+	
+	.info_table{
+		table{
+			vertical-align: top;
+			td{
+				vertical-align: top;
+			}
+		}
+		ul{
+			margin:0;
+			padding: 0;
+			list-style-type: none;
+		}
+	} //.info_table{
+		
+	span.extra-icon{
+		display: inline-block;
+		position: relative;
+		padding-left:56px;
+		&::before{
+			background-image: url(../images/bg-icons.png);
+			background-repeat: no-repeat;
+			height: 38px;
+			width: 38px;						
+			position: absolute;
+			left: 0;
+			top: -6px;
+			content: "";
+		}
+	}	
+	span.parking-icon{
+		&::before{
+			background-position:  0 -95px;	
+		}
+	}
+	span.wifi-icon{
+		&::before{
+			background-position:  -38px -95px;	
+		}
+	}
+	span.food-icon{
+		&::before{
+			background-position:  -76px -95px;	
+		}
+	}
+	span.general-icon{
+		&::before{
+			background-position:  -114px -95px;	
+		}
+	}
+	span.language-icon{
+		&::before{
+			background-position:  -152px -95px;	
+		}
+	}
+	span.activites-icon{
+		&::before{
+			background-position:  -190px -95px;	
+		}
+	}

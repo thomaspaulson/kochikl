@@ -1,0 +1,6 @@
+eo:
+  GridFieldSortableRows:
+    ALLOW_DRAG_DROP: 'Enŝalti reordigadon ŝove kaj demete'
+    EditPermissionsFailure: 'Mankas enhavopermesoj'
+    NEXT: 'Movi al sekva paĝo'
+    PREVIOUS: 'Movi al antaŭa paĝo'

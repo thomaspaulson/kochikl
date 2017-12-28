@@ -7,20 +7,20 @@ $(document).ready(function() {
     var searchField = $('#SearchForm_SearchForm_Search');
     var default_value = searchField.val();
     searchField.focus(function() {
-            $(this).addClass('active');
-            if(searchField.val() == default_value) {
-                    searchField.val('');
-            }
+        $(this).addClass('active');
+        if(searchField.val() == default_value) {
+            searchField.val('');
+        }
     });
     searchField.blur(function() {
-              if(searchField.val() == '') {
-                            searchField.val(default_value);
-              }
+        if(searchField.val() == '') {
+            searchField.val(default_value);
+        }
     });
 
     // show enquiry_form at PageContent
     $(".contact_enquiry").click(function(event) {
-              //event.preventDefault();
+          //event.preventDefault();
           $("#enquiry_form").toggle();	  
     }); //$(".contact_enquiry").click(function(event) {
 
@@ -32,35 +32,55 @@ $(document).ready(function() {
 
     // hide/show expandable searchform
     $('.search-title').click(function(){
-            if($(this).find('i').attr( 'class' ) == 'down'){
-                    $(this).find('i').removeClass('down');
-                    $(this).find('i').addClass('up');
-                    $('.searchform-expandable').show();	
-                    //$(".searchform-expandable").slideDown("slow");	
-            }	
-            else{
-                    $(this).find('i').removeClass('up');
-                    $(this).find('i').addClass('down');
-                    $('.searchform-expandable').hide();		
-                    //$(".searchform-expandable").slideUp("slow");	
-            }
+        if($(this).find('i').attr( 'class' ) == 'down'){
+            $(this).find('i').removeClass('down');
+            $(this).find('i').addClass('up');
+            $('.searchform-expandable').show();	
+            //$(".searchform-expandable").slideDown("slow");	
+        }	
+        else{
+            $(this).find('i').removeClass('up');
+            $(this).find('i').addClass('down');
+            $('.searchform-expandable').hide();		
+            //$(".searchform-expandable").slideUp("slow");	
+        }
     });
 
     // hide/show expandable filterform
     $('.mobile-filter-title').click(function(){
-            if($(this).find('i').attr( 'class' ) == 'down'){
-                    $(this).find('i').removeClass('down');
-                    $(this).find('i').addClass('up');
-                    $('.filter-form-expandable').show();	
-                    //$(".searchform-expandable").slideDown("slow");	
-            }	
-            else{
-                    $(this).find('i').removeClass('up');
-                    $(this).find('i').addClass('down');
-                    $('.filter-form-expandable').hide();		
-                    //$(".searchform-expandable").slideUp("slow");	
-            }
+        if($(this).find('i').attr( 'class' ) == 'down'){
+            $(this).find('i').removeClass('down');
+            $(this).find('i').addClass('up');
+            $('.filter-form-expandable').show();	
+            //$(".searchform-expandable").slideDown("slow");	
+        }	
+        else{
+            $(this).find('i').removeClass('up');
+            $(this).find('i').addClass('down');
+            $('.filter-form-expandable').hide();		
+            //$(".searchform-expandable").slideUp("slow");	
+        }
     });
 
-	
+    //$("#lightgallery").lightGallery(); 	    
+    $(".lightbox-item").click(function(event){
+        event.preventDefault();
+        itemIndex = parseInt($(this).attr("data-index")); 
+        $(this).lightGallery({
+                dynamic: true,
+                dynamicEl: gallery,
+                download: false,
+                loadYoutubeThumbnail: true,
+                youtubeThumbSize: 'default',
+                loadVimeoThumbnail: true,
+                vimeoThumbSize: 'thumbnail_medium',
+                index: itemIndex
+            });        
+        //itemIndex = $(this).attr("data-index"); 
+        //var $lg = $('#lightgallery');
+        //console.log(itemIndex);
+        //$(this).data('lightGallery').slide(itemIndex);    
+    }); //$(".lg-gallery").click(function(){
+    
+    
 }); //$(document).ready(function() {
