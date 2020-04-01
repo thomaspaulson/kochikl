@@ -1,6 +1,10 @@
 <?php
+namespace KochiKL\Forms;
+
+use SilverStripe\Forms\Form;
 //
-class ContentSearchFilterForm extends Form {
+class ContentSearchForm extends Form 
+{
 
     /**
      * Our constructor only requires the controller and the name of the form
@@ -10,20 +14,19 @@ class ContentSearchFilterForm extends Form {
     public function __construct($controller, $name) {
         
         $locations = Location::get()->map('ID','Title')->toArray();
-        $locations = array('all' => 'All locations') + $locations;
-        //array_unshift($locations, array('all' => 'All locations') );        
+        $locations = array('all'  => 'All locations') + $locations;
         $data = $controller->data();
         $types = $data->TypeTags()->map('ID','Title')->toArray();
         $types = array('all' => 'All types') + $types;
-        //array_unshift($types, array('all' => 'All types') );
         $fields = new FieldList(
-            OptionsetField::create('Location','Location', $locations),
-            OptionsetField::create('Type','Type', $types)            
+            DropdownField::create('Location','Location', $locations),
+            DropdownField::create('Type','Type', $types),
+            TextField::create('q','Keywords')
         );
         
 
         $actions = new FieldList(
-            FormAction::create('doSearchForm', 'filter')
+            FormAction::create('doSearchForm', 'Search')
         );
 
         $required = new RequiredFields(array(           

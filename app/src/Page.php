@@ -7,6 +7,7 @@ namespace {
     use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
     use SilverStripe\Forms\ToggleCompositeField;
     use SilverStripe\View\ViewableData;
+    use KochiKL\MySearchForm;
     
     class Page extends SiteTree
     {

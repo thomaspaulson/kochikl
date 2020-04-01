@@ -1,4 +1,5 @@
 <?php
+namespace KochiKL\Model;
 //
 class FooterBlock extends Block{
  
