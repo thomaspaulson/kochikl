@@ -1,4 +1,0 @@
-fa_IR:
-  GridFieldSortableRows:
-    ALLOW_DRAG_DROP: 'اجازه مرتب سازی مجدد با کشیدن و رها کردن'
-    EditPermissionsFailure: 'بدون مجوز ویرایش'

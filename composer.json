@@ -1,30 +1,45 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
-	"require": {
-		"php": ">=5.3.3",
-		"silverstripe/cms": "3.6.0",
-		"silverstripe/framework": "3.6.0",
-		"silverstripe/reports": "3.6.0",
-		"silverstripe/siteconfig": "3.6.0",
-		"silverstripe-themes/simple": "3.1.*",
-		"silverstripe/blog": "2.*@dev",
-		"unclecheese/betterbuttons": "1.3.*@dev",
-		"heyday/silverstripe-menumanager": "2.2.2",
-		"colymba/gridfield-bulk-editing-tools": "2.1.10",
-		"undefinedoffset/sortablegridfield": "1.0.*@dev"
-	},
-	"require-dev": {
-		"phpunit/PHPUnit": "~3.7@stable"
-	},
-	"extra": {
-		"branch-alias": {
-			"3.x-dev": "3.6.x-dev"
-		}
-	},
-	"config": {
-		"process-timeout": 600
-	},
-	"prefer-stable": true,
-	"minimum-stability": "dev"
+    "name": "silverstripe/installer",
+    "type": "silverstripe-recipe",
+    "description": "The SilverStripe Framework Installer",
+    "require": {
+        "php": ">=7.1.0",
+        "silverstripe/recipe-plugin": "^1.2",
+        "silverstripe/recipe-cms": "4.4.0@stable",
+        "silverstripe-themes/simple": "~3.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "KochiKL\\": "src/"
+        }
+    },
+    "extra": {
+        "resources-dir": "_resources",
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ],
+        "expose": [
+            "themes/kochikl/css",
+            "themes/kochikl/js"
+        ]        
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

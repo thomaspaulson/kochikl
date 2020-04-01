@@ -1,4 +1,0 @@
-pl:
-  GridFieldSortableRows:
-    ALLOW_DRAG_DROP: 'Pozwól na reorganizację przez drag and drop'
-    EditPermissionsFailure: 'Brak możliwości edycji'
